@@ -1,0 +1,221 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+}
+
+.wrapper {
+    width: 20%;
+    background: #fff;
+    padding-bottom: 70px;
+    border-radius: 20px;
+    transition: .5s;
+}
+
+.wrapper h1 {
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 20px 0 40px 0;
+}
+
+.register,
+.login {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.register a,
+.login a {
+    color: #000;
+}
+
+input {
+    width: 60%;
+    height: 40px;
+    outline: none;
+    border: none;
+    background: #f5f5f5;
+    padding-left: 10px;
+}
+
+input::placeholder {
+    text-transform: uppercase;
+}
+
+.btn-register,
+.btn-login {
+    width: 60%;
+    height: 60px;
+    border: none;
+    background: #000;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.notice-success {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #f5f5f5cc;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.login-success,
+.register-success {
+    position: relative;
+    width: 20%;
+    height: 250px;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-success {
+    width: 90%;
+    height: 60%;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.tick {
+    font-size: 60px;
+    color: green;
+}
+
+.error {
+    font-size: 40px;
+    color: red;
+    border: 3px solid currentColor;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    line-height: 50px;
+    text-align: center;
+}
+
+.close-notice {
+    font-size: 25px;
+    color: red;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.login-success h5,
+.register-success h5 {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.login-success p,
+.register-success p {
+    letter-spacing: 3px;
+}
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+    .wrapper {
+        width: 40%;
+    }
+
+    .login-success,
+    .register-success {
+        width: 35%;
+        height: 200px;
+    }
+
+    .main-success {
+        width: 90%;
+        height: 70%;
+        line-height: 1.6;
+    }
+
+    .error {
+        font-size: 30px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    .login-success h5,
+    .register-success h5 {
+        font-size: 25px;
+        margin-top: 15px;
+    }
+
+    .login-success p,
+    .register-success p {
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:430px) {
+    .wrapper {
+        width: 90%;
+    }
+
+    .login-success,
+    .register-success {
+        width: 80%;
+        height: 200px;
+    }
+
+    .main-success {
+        width: 90%;
+        height: 70%;
+        line-height: 1.6;
+    }
+
+    .error {
+        font-size: 30px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    .login-success h5,
+    .register-success h5 {
+        font-size: 25px;
+        margin-top: 15px;
+    }
+
+    .login-success p,
+    .register-success p {
+        font-size: 13px;
+    }
+
+    input {
+        width: 70%;
+    }
+
+    .btn-register,
+    .btn-login {
+        width: 70%;
+    }
+}

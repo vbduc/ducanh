@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/icon.png">
+    <link rel="stylesheet" href="../assets/css/pay.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <title>Thanh Toán</title>
+</head>
+
+<body>
+    <div id="container">
+        <div class="card-left">
+            <div class="main-left">
+                <img src="../assets/images/logo.png" alt="" class="logo">
+                <h3>Thông tin thanh toán</h3>
+                <h5>Bạn đã có tài khoản? <a href="../src/login.html">Đăng nhập</a></h5>
+                <div class="address-available">
+                    <h3>Sử dụng địa chỉ của bạn <span style="font-size: 10px;text-transform: none;">(Bấm để chọn)</span>
+                    </h3>
+                    <div class="main-address-pay">
+                        <p class="name-user">Họ và Tên: <span>Hoàng Anh</span></p>
+                        <p class="email-user">Email: <span>anhnhph33991@fpt.edu.vn</span></p>
+                        <p class="phone-user">SĐT: <span>0367253666</span></p>
+                        <p class="address-user">Địa chỉ: <span>Số 16, Thôn 1, Xã Song Phương, Huyện Hoài Đức, Hà Nội</span></p>
+                    </div>
+                    <a href="/src/user.html?to=address" class="add-address"><i class="fa-solid fa-circle-plus"></i>Thêm
+                        địa chỉ giao hàng</a>
+                </div>
+                <form>
+                    <input type="text" class="name" placeholder="Họ và Tên">
+                    <input type="email" class="email" placeholder="Email" name="email">
+                    <input type="tel" class="phone" placeholder="Điện thoại">
+                    <input type="text" class="address" placeholder="Địa chỉ">
+                    <input type="text" class="province-city" placeholder="Tỉnh/TP">
+                    <input type="text" class="district" placeholder="Quận/Huyện">
+                    <input type="text" class="wards" placeholder="Xã/Phường">
+                </form>
+                <div class="control">
+                    <a href="../src/cart.html" class="back-cart">
+                        <i class="fa-solid fa-chevron-left"></i> Trở lại giỏ hàng</a>
+                    <div class="method-payment">
+                        <select id="payment">
+                            <option>Thanh toán khi nhận hàng</option>
+                            <option>Thanh toán qua ngân hàng</option>
+                        </select>
+                        <button class="btn-pay" type="submit">Thanh Toán</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-right">
+            <div class="wrapper-right">
+                <h2>Đơn hàng <span>(0 sản phẩm)</span></h2>
+                <div class="main-right">
+                    <!-- <div class="item-products">
+                        <div class="item-img" data-quantity="1">
+                            <img src="https://salt.tikicdn.com/cache/750x750/ts/product/2c/ee/6b/6907022152fcc2e6c198e8e729138042.jpg.webp"
+                                alt="">
+                        </div>
+                        <div class="title-products">
+                            <p class="name">Chân váy xòe xếp ly</p>
+                            <p class="color-size">Trắng / Size M</p>
+                        </div>
+                        <p class="price">200.000đ</p>
+                    </div> -->
+                </div>
+                <div class="total">
+                    <p>Tổng tiền <span>(Lưu ý: Đây chỉ là tổng tiền sản phẩm chưa tính phí vận chuyển)</span></p>
+                    <p class="total-payment">0đ</p>
+                </div>
+            </div>
+            <div class="show-product"><i class="fa-solid fa-chevron-down"></i></div>
+        </div>
+        <div class="notice-success">
+            <div class="notice">
+                <i class="fa-solid fa-xmark close"></i>
+                <h3>Cảm ơn bạn đã mua hàng</h3>
+                <p>Chúng tôi sẽ gọi điện cho bạn để xác nhận đơn hàng</p>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="../assets/js/cart.js"></script>
+</body>
+
+</html>

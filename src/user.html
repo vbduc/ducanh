@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/icon.png">
+    <link rel="stylesheet" href="../assets/css/Global.css">
+    <link rel="stylesheet" href="../assets/css/user.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <title>Tài khoản</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="header-top">
+                <a href="" class="support-payment">Hướng dẫn mua hàng và thanh toán?</a>
+                <p class="contact">Liên hệ: <a href="#">0367253666</a></p>
+            </div>
+            <div class="main-header">
+                <div class="menu-icon"><i class="fa-solid fa-bars menu"></i></div>
+                <nav>
+                    <i class="fa-solid fa-x close-menu"></i>
+                    <li><a href="../index.html">Trang chủ</a></li>
+                    <li class="menClothes">
+                        <a href="#">Đồ Nam</a>
+                        <i class="fa-solid fa-angle-down"></i>
+                        <ul class="menClothes-child">
+                            <li><a href="/src/clothes.html?type=shirt&category=men">Áo sơ mi</a></li>
+                            <li><a href="/src/clothes.html?type=polo&category=men">Áo polo</a></li>
+                            <li><a href="/src/clothes.html?type=Tshirt&category=men">Áo thun</a></li>
+                            <li><a href="/src/clothes.html?type=short&category=men">Quần short</a></li>
+                            <li><a href="/src/clothes.html?type=kaki&category=men">Quần kaki</a></li>
+                            <li><a href="/src/clothes.html?type=jean&category=men">Quần Jean</a></li>
+                        </ul>
+                    </li>
+                    <li class="womenClothes">
+                        <a href="#">Đồ Nữ</a>
+                        <i class="fa-solid fa-angle-down"></i>
+                        <ul class="womenClothes-child">
+                            <li> <a href="/src/clothes.html?type=short-shirt&category=women">Áo sơ mi</a></li>
+                            <li> <a href="/src/clothes.html?type=hoodie&category=women">Áo Hoodie</a></li>
+                            <li> <a href="/src/clothes.html?type=Tshirt&category=women">Áo thun</a></li>
+                            <li> <a href="/src/clothes.html?type=skirt&category=women">Váy </a></li>
+                            <li> <a href="/src/clothes.html?type=trousers&category=women">Quần nữ</a></li>
+                            <li> <a href="/src/clothes.html?type=short&category=women">Quần short </a></li>
+                        </ul>
+                    </li>
+                    <li class="accessory">
+                        <a href="#">Phụ Kiện</a>
+                        <i class="fa-solid fa-angle-down"></i>
+                        <ul class="accessory-child">
+                            <li> <a href="/src/clothes.html">Phụ kiện Nam</a> </li>
+                            <li> <a href="/src/clothes.html">Phụ kiện Nữ</a> </li>
+                        </ul>
+                    </li>
+                </nav>
+                <div class="logo"><img src="../assets/images/logo.png" alt=""></div>
+                <div class="header-main-right">
+                    <div class="search">
+                        <input type="text" class="search-input" placeholder="Tìm kiếm quần áo nam, nữ, phụ kiện">
+                        <i class="fa-solid fa-magnifying-glass btn-search"></i>
+                        <div class="suggest">
+                            <h6>Sản phẩm được tìm nhiều nhất</h6>
+                            <ul>
+                                <li><a href="/src/results-search.html?search=Áo thun">Áo thun
+                                    </a></li>
+                                <li><a href="/src/results-search.html?search=Áo sơ mi ">Áo sơ mi</a></li>
+                                <li><a href="/src/results-search.html?search=Quần short">Quần short</a></li>
+                                <li><a href="/src/results-search.html?search=Áo Hoodie">Áo Hoodie</a></li>
+                                <li><a href="/src/results-search.html?search=Quần kaki">Quần kaki</a></li>
+                                <li><a href="/src/results-search.html?search=Quần jean">Quần jean</a></li>
+                                <li><a href="/src/results-search.html?search=Váy">Váy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-controls">
+                        <div class="notice">
+                            <img src="../assets/icon/addcart.png" alt="">
+                            <span>Đã thêm vào giỏ hàng</span>
+                        </div>
+                        <div class="profile">
+                            <img src="../assets/icon/user.png" alt="">
+                            <ul class="profile-child">
+                                <li> <a href="/src/login.html">Đăng nhập</a> </li>
+                                <li> <a href="/src/register.html">Đăng ký</a> </li>
+                            </ul>
+                        </div>
+                        <a href="./cart.html" class="cart" data-count="0"><img src="../assets/icon/cart.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <a href="#" id="btn-to-top"><i class="fa-solid fa-angle-up"></i></a>
+        <div class="main-loader">
+            <div id="loader"></div>
+        </div>
+        <div class="container">
+            <h2>Xin chào,</h2>
+            <h1 class="user"></h1>
+            <div class="main">
+                <ul class="menu-left">
+                    <li class="active" data-choose="profile">Thông tin tài khoản</li>
+                    <li data-choose="order">Quản lý đơn hàng</li>
+                    <li data-choose="changePassword">Thay đổi mật khẩu</li>
+                    <li data-choose="address">Thông tin giao hàng</li>
+                </ul>
+                <div class="card-right">
+                    <!-- <div class="user-profile">
+                        <div><p>Tài khoản:</p> <span>Baodt2911</span></div>
+                        <div><p>Email:</p> <span>dobao2911bs@gmail.com</span></div>
+                    </div> -->
+                    <!-- <div class="order">
+                        <h5>Đơn hàng đã mua</h5>
+                        <div class="main-order">
+                            <div class="item-product-order">
+                                <div class="item-img">
+                                <img src="https://bizweb.dktcdn.net/thumb/large/100/426/984/products/1df5ed70-db37-4cc3-9652-89a2f1ed24c4.jpg?v=1634555404633" alt="">
+                                </div>
+                                <div class="title-product-order">
+                                    <p class="name-order">Áo sơ mi tay ngắn cổ vest tay ngắn phối hoạ tiết cá</p>
+                                    <p class="color-size-order">Trắng / Size M</p>
+                                    <div class="price-order">Giá : <span>200.000đ</span> </div>
+                                </div>
+                                <div class="quantity-order">x1</div>
+                            </div>
+                            <div class="item-product-order">
+                                <div class="item-img">
+                                <img src="https://bizweb.dktcdn.net/thumb/large/100/426/984/products/1df5ed70-db37-4cc3-9652-89a2f1ed24c4.jpg?v=1634555404633" alt="">
+                                </div>
+                                <div class="title-product-order">
+                                    <p class="name-order">Áo sơ mi tay ngắn cổ vest tay ngắn phối hoạ tiết cá</p>
+                                    <p class="color-size-order">Trắng / Size M</p>
+                                    <div class="price-order">Giá : <span>200.000đ</span> </div>
+                                </div>
+                                <div class="quantity-order">x1</div>
+                            </div><div class="item-product-order">
+                                <div class="item-img">
+                                <img src="https://bizweb.dktcdn.net/thumb/large/100/426/984/products/1df5ed70-db37-4cc3-9652-89a2f1ed24c4.jpg?v=1634555404633" alt="">
+                                </div>
+                                <div class="title-product-order">
+                                    <p class="name-order">Áo sơ mi tay ngắn cổ vest tay ngắn phối hoạ tiết cá</p>
+                                    <p class="color-size-order">Trắng / Size M</p>
+                                    <div class="price-order">Giá : <span>200.000đ</span> </div>
+                                </div>
+                                <div class="quantity-order">x1</div>
+                            </div><div class="item-product-order">
+                                <div class="item-img">
+                                <img src="https://bizweb.dktcdn.net/thumb/large/100/426/984/products/1df5ed70-db37-4cc3-9652-89a2f1ed24c4.jpg?v=1634555404633" alt="">
+                                </div>
+                                <div class="title-product-order">
+                                    <p class="name-order">Áo sơ mi tay ngắn cổ vest tay ngắn phối hoạ tiết cá</p>
+                                    <p class="color-size-order">Trắng / Size M</p>
+                                    <div class="price-order">Giá : <span>200.000đ</span> </div>
+                                </div>
+                                <div class="quantity-order">x1</div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- <div class="change-password">
+                        <div class="main-password">
+                            <input type="password" placeholder="Nhập mật khẩu hiện tại">
+                            <input type="password" placeholder="Nhập mật khẩu mới">
+                            <input type="password" placeholder="Nhập lại mật khẩu mới">
+                        </div>
+                        <button class="btn-change-password">Thay đổi</button>
+                    </div> -->
+                    <!-- <div class="address">
+                        <div class="main-address">
+                            <div class="item-address">
+                                <p>Họ và Tên</p>
+                                <input type="text">
+                            </div>
+                            <div class="item-address">
+                                <p>Điện thoại</p>
+                                <input type="text">
+                            </div>
+                            <div class="item-address">
+                                <p>Địa chỉ</p>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="edit-add-address">
+                            <p class="edit-address">Sửa</p>
+                            <buttom class="btn-add-address">Thêm mới</buttom>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="main-footer">
+                <div class="contact-footer-1">
+                    <h4>Về chúng tôi</h4>
+                    <p>Chúng tôi cung cấp các sản phẩm thời trang độc đáo và chất lượng cao cho các bạn trẻ.</p>
+                    <img src="../assets/images/logo.png" alt="">
+                </div>
+                <div class="contact-footer-2">
+                    <h4>Liên hệ</h4>
+                    <p>Địa chỉ: Số 16, Thôn 1, Xã Song Phương, Hoài Đức, Hà Nội</p>
+                    <p>Email: anhnhph33991@fpt.edu.vn</p>
+                    <p>Điện thoại: 0367253666</p>
+                </div>
+                <div class="contact-footer-2">
+                    <h4>Kết nối với chúng tôi</h4>
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                    <form class="newsletter-form">
+                        <label for="email">Đăng ký nhận bản tin</label>
+                        <input type="email" id="email" name="email" placeholder="Nhập email của bạn...">
+                        <button type="submit">Đăng ký</button>
+                    </form>
+                </div>
+            </div>
+            <p class="title-footer">
+                &copy; 2023 CBD Fashion. All rights reserved.
+            </p>
+        </footer>
+    </div>
+    <script src="../assets/js/Global.js"></script>
+</body>
+
+</html>

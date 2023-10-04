@@ -1,0 +1,362 @@
+#container {
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  background: url(https://www.thecoth.com/wp-content/uploads/2021/07/fast-fashion-la-gi-1-e1625324663233.jpg)
+    no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.banner::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to top, #fff, transparent);
+}
+
+.banner h1 {
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  color: #fff;
+  font-size: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.banner .btn-shop {
+  position: relative;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 50px;
+  padding: 0 30px;
+  color: #fff;
+  border-top: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  user-select: none;
+  z-index: 2;
+}
+
+.banner .btn-shop::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #6c5ce7;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.banner .btn-shop::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background: #6c5ce7;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.banner .btn-shop:hover::after {
+  width: 50%;
+}
+
+.banner .btn-shop:hover::before {
+  width: 50%;
+}
+
+.bestseller,
+.sale,
+.favourite {
+  position: relative;
+  width: calc(90% - 6px);
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.bestseller h1,
+.sale h1,
+.favourite h1 {
+  position: relative;
+  display: inline-block;
+  margin: 50px 0;
+  font-family: system-ui, sans-serif;
+}
+
+.bestseller-content,
+.sale-content,
+.favourite-content {
+  width: 100%;
+  height: 500px;
+  overflow: scroll;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  scroll-snap-type: both;
+  scroll-behavior: smooth;
+}
+
+.bestseller-content::-webkit-scrollbar,
+.sale-content::-webkit-scrollbar,
+.favourite-content::-webkit-scrollbar {
+  display: none;
+}
+
+.next,
+.prev {
+  position: absolute;
+  top: 50%;
+  left: -50px;
+  font-size: 50px;
+  color: #6c5ce7;
+  cursor: pointer;
+}
+
+.next {
+  left: unset;
+  right: -50px;
+}
+
+.more {
+  position: absolute;
+  left: 50%;
+  bottom: -20px;
+  transform: translateX(-50%);
+  color: #6c5ce7;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.more:hover {
+  text-decoration: underline;
+}
+
+.bestseller-content .item-products,
+.sale-content .item-products,
+.favourite-content .item-products {
+  position: relative;
+  width: 300px;
+  height: 450px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+  scroll-snap-align: start;
+  flex: 1 0 300px;
+  border-radius: 30px 30px;
+  transition: 0.5s;
+  box-shadow: 0 0 2px 0 #b2bec3;
+}
+
+.bestseller-content .item-products .name,
+.sale-content .item-products .name,
+.favourite-content .item-products .name {
+  padding: 0 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bestseller-content .item-products .price,
+.sale-content .item-products .price,
+.favourite-content .item-products .price {
+  position: relative;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.bestseller-content .item-products .price::after,
+.sale-content .item-products .price::after,
+.favourite-content .item-products .price::after {
+  position: absolute;
+  content: "đ";
+  top: -2px;
+  font-size: 13px;
+  color: #e74c3c;
+}
+
+.bestseller-content .item-products .item-img,
+.sale-content .item-products .item-img,
+.favourite-content .item-products .item-img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.5s;
+  border-bottom: 1px solid #dfe6e9;
+}
+
+.swap-content .item-products:hover {
+  box-shadow: 0 10px 50px 0 #dfe6e9;
+  border-radius: 5px 30px;
+}
+
+.bestseller-content .item-products:hover,
+.sale-content .item-products:hover,
+.favourite-content .item-products:hover {
+  box-shadow: 0 5px 20px 0 #dfe6e9;
+}
+
+.bestseller-content .item-products:hover .item-img,
+.sale-content .item-products:hover .item-img,
+.favourite-content .item-products:hover .item-img,
+.swap-content .item-products:hover .item-img {
+  border-radius: 0;
+  box-shadow: 0 0 5px 0 #b2bec3;
+  border-radius: 0 0 0 30px;
+}
+
+.bestseller-content .item-products:hover .name,
+.sale-content .item-products:hover .name,
+.favourite-content .item-products:hover .name,
+.swap-content .item-products:hover .name {
+  color: #e74c3c;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .banner {
+    height: 500px;
+  }
+
+  .banner h1 {
+    margin: 0px 0;
+  }
+
+  .bestseller-content,
+  .sale-content,
+  .favourite-content {
+    height: 400px;
+    gap: 35px;
+  }
+
+  .bestseller-content .item-products,
+  .sale-content .item-products,
+  .favourite-content .item-products {
+    height: 300px;
+    flex: 1 0 200px;
+  }
+
+  .bestseller-content .item-products .name,
+  .sale-content .item-products .name,
+  .favourite-content .item-products .name {
+    font-size: 13px;
+  }
+
+  .bestseller-content .item-products .price,
+  .sale-content .item-products .price,
+  .favourite-content .item-products .price {
+    margin-top: 5px;
+  }
+
+  .next,
+  .prev {
+    font-size: 30px;
+  }
+
+  .next {
+    right: -25px;
+  }
+
+  .prev {
+    left: -25px;
+  }
+
+  .bestseller h1,
+  .sale h1,
+  .favourite h1 {
+    margin: 20px 0;
+  }
+}
+
+/* Phone */
+@media screen and (min-width: 320px) and (max-width: 430px) {
+  .banner {
+    height: 300px;
+    gap: 10px;
+  }
+
+  .banner h1 {
+    font-size: 40px;
+  }
+
+  .banner .btn-shop {
+    font-size: 25px;
+    padding: 0 10px;
+  }
+
+  .next,
+  .prev {
+    display: none !important;
+  }
+
+  .bestseller h1,
+  .sale h1,
+  .favourite h1 {
+    font-size: 20px;
+    margin: 20px 0;
+  }
+
+  .bestseller-content,
+  .sale-content,
+  .favourite-content {
+    height: 520px;
+    overflow: hidden !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: unset;
+    gap: 15px;
+  }
+
+  .bestseller-content .item-products,
+  .sale-content .item-products,
+  .favourite-content .item-products {
+    width: 150px;
+    height: 250px;
+    flex: 0 1 150px;
+    border-radius: 5px;
+  }
+
+  .bestseller-content .item-products .name,
+  .sale-content .item-products .name,
+  .favourite-content .item-products .name {
+    padding: 0 10px;
+    font-size: 12px;
+  }
+
+  .bestseller-content .item-products .price,
+  .sale-content .item-products .price,
+  .favourite-content .item-products .price {
+    margin-top: 0;
+    font-size: 10px;
+  }
+
+  .bestseller-content .item-products .price::after,
+  .sale-content .item-products .price::after,
+  .favourite-content .item-products .price::after {
+    font-size: 8px;
+  }
+
+  .more {
+    bottom: -30px;
+    font-size: 14px;
+  }
+}

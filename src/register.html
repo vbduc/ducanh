@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/login&register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <title>Đăng ký</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Đăng ký</h1>
+        <div class="register">
+            <input type="text" placeholder="Tên đăng nhập" class="user-name">
+            <input type="email" name="email" placeholder="Email" class="email">
+            <input type="password" placeholder="Mật khẩu" class="password">
+            <input type="password" placeholder="Nhập lại mật khẩu" class="retype-password">
+            <button class="btn-register">Đăng ký</button>
+            <p>Bạn đã có tài khoản? <a href="../src/login.html">Đăng nhập</a></p>
+        </div>
+    </div>
+    <div class="notice-success">
+        <div class="register-success">
+            <i class="fa-solid fa-circle-xmark close-notice"></i>
+            <div class="main-success">
+                <i class="fa-regular fa-circle-check tick"></i>
+                <h5>Thông báo!!</h5>
+                <p>Đăng ký thành công</p>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/formValidation.js"></script>
+</body>
+
+</html>
